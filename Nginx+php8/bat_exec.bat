@@ -1,0 +1,1 @@
+docker exec -it php-server-instance8 /bin/bash

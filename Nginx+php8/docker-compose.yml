@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  test-php:
+    build: .
+    volumes:
+      - ./src:/usr/share/nginx/html
+
+  test-nginx:
+    image: nginx:1.25
+    ports:
+      - "9280:80"
+    volumes:
+      - ./src:/usr/share/nginx/html
+    depends_on:
+      - test-php
