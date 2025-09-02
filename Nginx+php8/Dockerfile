@@ -15,6 +15,10 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # 기본 문서 루트
 ENV DEST /usr/share/nginx/html
 
+
+# nginx 설정 복사
+COPY default.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 80
 
 CMD service nginx start && php-fpm
