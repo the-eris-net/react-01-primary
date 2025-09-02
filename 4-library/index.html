@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+    <script>
+        $.get("list-item.html", function (data) {
+            $("#container").html(data);
+        });
+    </script>
+</body>
+
+</html>
