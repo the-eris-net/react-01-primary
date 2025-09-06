@@ -2,18 +2,14 @@ import { useState } from 'react';
 
 function App() {
   const [todos, setTodos] = useState([]);
-  const [text, setText] = useState('');
+  let [text, setText] = useState('');
 
   const addTodo = () => {
     if (text.trim()) {
       setTodos([...todos, text]);
-      // setText("");
-      text = '';
+      setText('');
     }
   };
-
-  console.log('hi');
-  console.log('sd');
 
   const removeTodo = (index) => {
     setTodos(todos.filter((_, i) => i !== index));
